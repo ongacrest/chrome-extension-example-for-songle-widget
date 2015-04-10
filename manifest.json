@@ -1,0 +1,19 @@
+{
+  "name": "Chrome Extension Example for Songle Widget",
+  "version": "0.0.0",
+  "manifest_version": 2,
+  "description": "Chrome Extension Example for Songle Widget",
+  "icons": {
+    "16": "images/16.png",
+    "48": "images/48.png",
+    "128": "images/128.png",
+    "256": "images/256.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["lib/jquery-2.1.3.min.js", "lib/songle-widget-api-3.1.170.min.js", "src/main.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
